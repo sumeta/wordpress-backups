@@ -1,4 +1,5 @@
 ### FTP
 ftp.host=
+ftp.port=
 ftp.user=
 ftp.password=

@@ -8,6 +8,7 @@ import java.util.Properties;
 public class Configuration {
 	
 	private String host;
+	private int port;
 	private String user;
 	private String pass;
 	
@@ -22,13 +23,13 @@ public class Configuration {
             prop.load(input);
             
 			this.host = prop.getProperty("ftp.host");
+			this.port = Integer.parseInt(prop.getProperty("ftp.port"));
 			this.user =  prop.getProperty("ftp.user");
 			this.pass = prop.getProperty("ftp.password");
 
 	        } catch (IOException ex) {
 	            ex.printStackTrace();
 	        }
-	      
 
 	}
 
@@ -40,6 +41,16 @@ public class Configuration {
 
 	public void setHost(String host) {
 		this.host = host;
+	}
+	
+	
+	public int getPort() {
+		return port;
+	}
+
+
+	public void setPort(int port) {
+		this.port = port;
 	}
 
 

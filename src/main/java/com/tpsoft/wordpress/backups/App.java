@@ -62,7 +62,7 @@ public class App
             //new ftp client
             FTPClient ftp = new FTPClient();
             //try to connect
-            ftp.connect(config.getHost());
+            ftp.connect(config.getHost(),config.getPort());
             //login to server
             if (!ftp.login(config.getUser(),config.getPass())) {
                 ftp.logout();
