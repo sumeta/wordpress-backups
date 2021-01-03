@@ -135,7 +135,7 @@ public class App
 		BufferedReader br = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
 		String line = null;
 		while ((line = br.readLine()) != null) {
-			if(line.contains("define('DB_NAME'")) {
+			if(line.contains("'DB_NAME'")) {
 				Pattern p = Pattern.compile("'(.*?)'");
 				Matcher m = p.matcher(line);
 				while (m.find()) {
@@ -145,7 +145,7 @@ public class App
 				  }
 				}
 			}
-			if(line.contains("define('DB_USER'")) {
+			if(line.contains("'DB_USER'")) {
 				Pattern p = Pattern.compile("'(.*?)'");
 				Matcher m = p.matcher(line);
 				while (m.find()) {
@@ -155,7 +155,7 @@ public class App
 					}
 				}
 			}
-			if(line.contains("define('DB_PASSWORD'")) {
+			if(line.contains("'DB_PASSWORD'")) {
 				Pattern p = Pattern.compile("'(.*?)'");
 				Matcher m = p.matcher(line);
 				while (m.find()) {
@@ -165,7 +165,7 @@ public class App
 					}
 				}
 			}
-			if(line.contains("define('DB_HOST'")) {
+			if(line.contains("'DB_HOST'")) {
 				Pattern p = Pattern.compile("'(.*?)'");
 				Matcher m = p.matcher(line);
 				while (m.find()) {
